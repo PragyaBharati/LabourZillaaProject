@@ -28,24 +28,27 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LoginId)
-                </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoginId)
+            </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.AdminName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RoleA)
-                </td>
-                @*<td>
-                        <a asp-action="Details" asp-route-id="@item.LoginId"><button>Details</button></a>
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.LoginId"><button>Edit</button></a>
-                    </td>*@
-            </tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdminName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleA)
+            </td>
+            @*<td>
+            <a asp-action="Details" asp-route-id="@item.LoginId"><button>Details</button></a>
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.LoginId"><button>Edit</button></a>
+        </td>*@
+            <td>
+                <a asp-action="Create" asp-route-id="@item.LoginId"><button>Create</button></a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

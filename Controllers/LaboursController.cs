@@ -78,6 +78,7 @@ namespace LabourZillaZoneee.Controllers
             }
             return View(labour);
         }
+        [Authorize(Roles ="Admins")]
 
         // GET: Labours/Edit/5
         public async Task<IActionResult> Edit(string id)
