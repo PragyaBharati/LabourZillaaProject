@@ -1,0 +1,49 @@
+﻿@model IEnumerable<LabourZillaZoneee.Models.Admin>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1 style="text-align:center">Admin</h1>
+
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr style="background-color: teal">
+            <th>
+                @Html.DisplayNameFor(model => model.LoginId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoleA)
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoginId)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.AdminName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleA)
+            </td>
+            @*<td>
+                <a asp-action="Details" asp-route-id="@item.LoginId"><button>Details</button></a>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.LoginId"><button>Edit</button></a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
