@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="img" style="background-image: url(../Images/labour2.jpg);background-size:cover;background-position:center center; height:100vh;position:fixed;left:0;right:0;z-index:-1;filter:blur(3px);-webkit-filter:blur(3px);"></div>
 
 
 <h1 style="text-align:center">Admin</h1>
@@ -25,25 +26,26 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.LoginId)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoginId)
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.AdminName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RoleA)
-            </td>
-            @*<td>
-                <a asp-action="Details" asp-route-id="@item.LoginId"><button>Details</button></a>
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.LoginId"><button>Edit</button></a>
-            </td>*@
-        </tr>
-}
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdminName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoleA)
+                </td>
+                @*<td>
+                        <a asp-action="Details" asp-route-id="@item.LoginId"><button>Details</button></a>
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.LoginId"><button>Edit</button></a>
+                    </td>*@
+            </tr>
+        }
     </tbody>
 </table>

@@ -4,6 +4,9 @@
     ViewData["Title"] = "Index";
 }
 
+
+<div class="img" style="background-image: url(../Images/labour2.jpg);background-size:cover;background-position:center center; height:100vh;position:fixed;left:0;right:0;z-index:-1;filter:blur(3px);-webkit-filter:blur(3px);"></div>
+
 <h1 style="text-align:center">Labours</h1>
 
 <p>
@@ -50,45 +53,45 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr >
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Profession)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CityAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StateL)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DailyWages)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TimeDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Available)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ppic)
-            </td>
-            <td>
-                <img src="@("/Images/"+item.Ppic)" width="200" height="200" />
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Profession)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CityAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StateL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DailyWages)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TimeDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Available)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ppic)
+                </td>
+                <td>
+                    <img src="@("/Images/"+item.Ppic)" width="200" height="200" />
+                </td>
 
-            <td>
-                <a asp-action="Details" asp-route-id="@item.Id"><button>Details</button></a>
-            </td>
-            @*<td>
-                <a asp-action="Delete" asp-route-id="@item.Id"><button>Edit</button></a>
-            </td>*@
-        </tr>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id"><button>Details</button></a>
+                </td>
+                @*<td>
+                        <a asp-action="Delete" asp-route-id="@item.Id"><button>Edit</button></a>
+                    </td>*@
+            </tr>
         }
     </tbody>
 </table>
